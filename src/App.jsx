@@ -32,7 +32,7 @@ const App = () => {
     console.log(bgColor);
 
     try {
-      const response = await fetch('http://localhost:5000/api/remove-background', {
+      const response = await fetch(`${import.meta.env.VITE_DEVELOPMENT_BACKEND_ADDRESS}/api/remove-background`, {
         method: 'POST',
         body: formData,
       });
